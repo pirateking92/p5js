@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(1000, 1000, WEBGL);
+  createCanvas(400, 400, WEBGL);
   angleMode(DEGREES);
 }
 
@@ -21,7 +21,7 @@ function draw() {
   // stroke(0, 0, 0): Black (no color)
   stroke(255);
   // iterates 100 times to create 100 shapes
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 50; i++) {
     var r = map(sin(frameCount), -1, 1, 100, 200);
     var g = map(i, 0, 50, 100, 200);
     var b = map(cos(frameCount), -1, 1, 200, 100);
@@ -35,7 +35,7 @@ function draw() {
       var rad = i * 3;
       var x = rad * cos(j);
       var y = rad * sin(j);
-      var z = sin(frameCount * 2 + i * 5) * 50;
+      var z = sin(frameCount + i * 5) * 20;
 
       vertex(x, y, z);
     }
